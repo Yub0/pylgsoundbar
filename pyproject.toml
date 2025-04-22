@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "python-lgsoundbar"
+version = "1.0.0"
+description = "A Python library for controlling LG soundbars"
+authors = ["Valentin LAMBOLEY-DEPOIRE <me@yubo.dev>"]
+readme = "README.md"
+packages = [{include = "lgsoundbar", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pycryptodome = "^3.19.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+flake8 = "^6.0.0"
+pylint = "^2.17.0"
+pytest = "^7.3.1"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+target-version = ["py311"]
+line-length = 88

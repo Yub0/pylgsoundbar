@@ -1,0 +1,37 @@
+[MASTER]
+ignore=CVS
+ignore-patterns=
+persistent=yes
+load-plugins=
+
+[MESSAGES CONTROL]
+disable=
+    C0111, # missing docstring
+    C0103, # invalid name
+    C1801, # len-as-condition
+    W1201, # logging-not-lazy
+    W1202, # logging-format-interpolation
+    W0703, # broad-except
+    R0913, # too-many-arguments
+    R0914, # too-many-locals
+    R0904, # too-many-public-methods
+
+[REPORTS]
+output-format=text
+reports=yes
+evaluation=10.0 - ((float(5 * error + warning + refactor + convention) / statement) * 10)
+
+[SIMILARITIES]
+min-similarity-lines=4
+ignore-comments=yes
+ignore-docstrings=yes
+ignore-imports=yes
+
+[FORMAT]
+max-line-length=88
+ignore-long-lines=^\s*(# )?<?https?://\S+>?$
+single-line-if-stmt=no
+indent-string='    '
+
+[MISCELLANEOUS]
+notes=FIXME,TODO
